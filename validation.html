@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+	<h1 class="text-center">JQUERY Validation</h1>
+	<form action="index.php" method="POST">
+		<label>Username: </label><br>
+		<input type="text" class="form-control" id="username">
+		<div id="username_error" style="color: red; border: 1px solid black;"></div><br>
+		<label>Password: </label><br>
+		<input type="text" class="form-control" id="password">
+		<div id="password_error" style="color: red; border: 1px solid black;"></div><br>
+		<label>Confirm Password: </label><br>
+		<input type="text" class="form-control" id="confirm_password">
+		<div id="confirm_password_error" style="color: red; border: 1px solid black;"></div><br>
+		<button type="submit" class="btn btn-primary" id="submit">Submit</button>
+	</form>
+</div>
+
+<script>
+
+	$(document).ready(function(){
+		$('#submit').click(function(){
+			let user = $('#username').val();
+			let pass = $('#password').val();
+			let con_pass = $('#confirm_password').val();
+			let user_regex = /^[A-Za-z. ]{3,20}$/;
+
+			if(user == "") {
+				$('#username_error').html('**Username must be filled.');
+				$('#username_error').css('border', '1px solid red');
+				return false;
+			}
+
+			if((user.length <= 3) || (user.length >= 20)){
+				$('#username_error').html('**Username must be between 3 and 20 characters.');
+				$('#username_error').css('border', '1px solid red');
+				return false;
+			}
+
+			if(user_regex.test(user) == false){
+				$('#username_error').html('**Invalid Username.');
+				$('#username_error').css('border', '1px solid red');
+				return false;
+			}
+
+			if(pass == "") {
+				$('#password_error').html('**Password must be filled.');
+				$('#password_error').css('border', '1px solid red');
+				return false;
+			}
+
+			if((pass.length <= 8) || (user.length >= 25)){
+				$('#password_error').html('**Password must be between 8 and 25 characters.');
+				$('#password_error').css('border', '1px solid red');
+				return false;
+			}
+
+			if(con_pass == "") {
+				$('#confirm_password_error').html('**Must be Filled.');
+				$('#confirm_password_error').css('border', '1px solid red');
+				return false;
+			}
+
+
+			if(con_pass !== pass) {
+				$('#confirm_password_error').html('**Password do not matching.');
+				$('#confirm_password_error').css('border', '1px solid red');
+				return false;
+			}
+
+		});
+	});
+
+</script>
+
+</body>
+</html>

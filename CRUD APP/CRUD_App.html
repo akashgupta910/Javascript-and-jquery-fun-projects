@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD App in JQUERY</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="text-center mt-4">CRUD APP IN JQUERY</h1>
+        <button class="btn btn-info mt-4" id="add_task">Add Task</button>
+        <table class="table mt-4">
+            <thead>
+              <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td id="task">Sample</td>
+                  <td><Button class="btn btn-danger" id="delete">Delete</Button></td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

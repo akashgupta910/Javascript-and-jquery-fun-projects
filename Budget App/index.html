@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        #budget-alert{
+                display: none;
+        }
+        #expense-alert{
+                display: none;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <span id="span"></span>
+    <h3 class="mt-4 mb-4">BUDGET APP</h3>
+    <div class="row">
+        <div class="col-lg-4">
+                <div class="alert alert-danger" role="alert" id="budget-alert">
+                Invalid Input!
+                </div>
+            <div class="card mb-5">
+                <div class="card-body">
+                <label>Please Enter your Budget:</label>
+                <input type="text" class="form-control" id="budget_inp"><br>
+                <button class="btn btn-outline-success" id="btn_budget">Calculate</button>
+                </div>
+            </div>
+
+                <div class="alert alert-danger" role="alert" id="expense-alert">
+                   Invalid Amount Input!
+                </div>
+            <div class="card">
+                    <div class="card-body">
+                    <label>Please Enter your Expense Title:</label>
+                    <input type="text" class="form-control" id="expense_title_inp"><br>
+                    <label>Please Enter Expense Amount:</label>
+                    <input type="text" class="form-control" id="expense_amount_inp"><br>
+                    <button class="btn btn-outline-danger" id="btn_add_expense">Add Expense</button>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+                <div class="card">
+                        <div class="card-body">
+                        <h4>BUDGET</h4><br>
+                        <h3 class="text-success">$<span id="budget">0</span></h3>
+                        </div>
+                </div>
+                <div class="text-center mt-5">
+                    <b class="mb-5">Expense Title</b>
+                    <div id="expense_title"></div>
+                </div>
+        </div>
+
+        <div class="col-lg-2">
+                <div class="card">
+                        <div class="card-body">
+                        <h4>EXPENSES</h4><br>
+                        <h4 class="text-danger">$<span id="expense">0</span></h4>
+                        </div>
+                </div>
+                <div class="text-center mt-5">
+                        <b class="mb-5">Expense Value</b>
+                        <div id="expense_amount"></div>
+                </div>
+        </div>
+
+        <div class="col-lg-3">
+                <div class="card">
+                        <div class="card-body">
+                        <h4>BALANCE</h4><br>
+                        <h3 class="text-danger">$<span id="balance">0</span></h3>
+                        </div>
+                </div>
+                <button class="mt-5 btn btn-danger ml-5" id="reset">Reset</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

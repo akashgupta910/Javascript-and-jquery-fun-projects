@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Score Keeper</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<header class="text-center">
+		<h1>My Score Keeper</h1>
+	</header><br>
+
+	<div class="container col-lg-4 text-center">
+
+		<h2><span>Score is: </span> <span id="p1_score"> 0 </span> to <span id="p2_score"> 0 </span></h2><br>
+
+		<button class="btn btn-info" id="button_1">Player 1</button>
+		<button class="btn btn-info" id="button_2">Player 2</button>
+		<button class="btn btn-danger" id="button_3">Reset</button><br>
+
+		<input type="number" value="6" class="form-control mt-3" id="limit"><br>
+
+		<h3 id="winner_is">The Winner is: <span id="winner_span"></span></h3>
+
+	</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

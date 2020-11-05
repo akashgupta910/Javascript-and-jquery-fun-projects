@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h1>What is JavaScript?</h1>
+	<input type="radio" name="grp1" id="rd1"> a. Markup Language</input><br>
+	<input type="radio" name="grp1" id="rd2"> b. Stylesheet</input><br>
+	<input type="radio" name="grp1" id="rd3"> c. Programming Language</input><br><br>
+	<input type="button" value="Submit" class="btn btn-primary" onclick="check()">
+</div>
+
+<script type="text/javascript">
+
+	// $(document).ready(function(){
+	// 	$("input[type='button']").click(function(){
+	// 		let radiovalue1 = $("input[#rd1]").val();
+	// 		if (radiovalue1) {
+	// 			swal({
+	// 			  title: "Sorry!",
+	// 			  text: "You Answer is Incorrect!",
+	// 			  icon: "error",
+	// 			  button: "Try Again!",
+	// 			});
+	// 		}
+	// 	});
+	// });
+
+	
+	function check() {
+
+		let rd1 = document.getElementById('rd1');
+		let rd2 = document.getElementById('rd2');
+		let rd3= document.getElementById('rd3');
+
+		if (rd1.checked == true) {
+			swal({
+				  title: "Sorry!",
+				  text: "You Answer is Incorrect!",
+				  icon: "error",
+				  button: "Try Again!",
+				});
+		}
+
+		if (rd2.checked == true) {
+			swal({
+				  title: "Sorry!",
+				  text: "You Answer is Incorrect!",
+				  icon: "error",
+				  button: "Try Again!",
+				});
+		}
+
+		if (rd3.checked == true) {
+			swal({
+				  title: "Good Job!",
+				  text: "You Answer is Correct!",
+				  icon: "success",
+				  button: "Ok",
+				});
+		}
+	}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+body{
+	background-color: #292c34;
+	color: #fff;
+}
+header{
+background: white;
+padding: 20px;
+}
+header > h1{
+			color: #24272E;
+}
